@@ -52,17 +52,17 @@ bilioteki.
 %build
 
 %install
-mkdir -p $RPM_BUILD_ROOT/usr/lib/python1.5/site-packages/HTMLgen
-install -m 555 $RPM_SOURCE_DIR/HTMLgen.pth $RPM_BUILD_ROOT/usr/lib/python1.5/site-packages/
-install -m 555 *.py $RPM_BUILD_ROOT/usr/lib/python1.5/site-packages/HTMLgen
+mkdir -p $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
+install -m 555 $RPM_SOURCE_DIR/HTMLgen.pth $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/
+install -m 555 *.py $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 					
 %files
 %doc data html image README ChangeLog *.rc *.css
-/usr/lib/python1.5/site-packages/HTMLgen
-/usr/lib/python1.5/site-packages/HTMLgen.pth
+%{_libdir}/python1.5/site-packages/HTMLgen
+%{_libdir}/python1.5/site-packages/HTMLgen.pth
 
 %changelog
 * Sat Jun 30 1998 Oliver Andrich <oli@andrich.net>
