@@ -1,0 +1,13 @@
+*** HTMLtest.py.orig	Mon Jun  1 11:40:03 1998
+--- HTMLtest.py	Mon Jun  1 11:40:10 1998
+***************
+*** 1,4 ****
+! #!/bin/env python
+  
+  """Test script which generates the online documentation for HTMLgen.
+  """
+--- 1,4 ----
+! #!/usr/bin/env python
+  
+  """Test script which generates the online documentation for HTMLgen.
+  """
