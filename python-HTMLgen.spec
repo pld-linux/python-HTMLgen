@@ -4,7 +4,7 @@ Version: 2.1
 Release: 3
 Copyright: distributable
 Group: Development/Languages/Python
-Group(pl): Proggramowanie/Jêzyki/Python
+Group(pl): Programowanie/Jêzyki/Python
 Source0: HTMLgen.tar.gz 
 Source1: HTMLgen.pth
 Patch0: python-HTMLgen-fixpaths.patch
