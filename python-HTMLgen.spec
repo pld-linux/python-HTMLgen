@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.python
 
-%define		module HTMLgen
+%define		module	HTMLgen
 
 Summary:	Class library to create HTML documents from within Python
 Summary(pl):	Modu³ do tworzenia dokumentów w HTML przy u¿yciu Pythona
