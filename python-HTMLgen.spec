@@ -1,18 +1,23 @@
+%include	/usr/lib/rpm/macros.python
+
 %define module HTMLgen
 
 Summary:	Class library to create HTML documents from within Python  
 Summary(pl):	Modu³ do tworzenia dokumentów w HTML przy u¿yciu Pythona  
 Name:		python-%{module}
 Version:	2.2.2
-Release:	4
+Release:	5
 License:	distributable
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 Source0:	http://starship.python.net/crew/friedrich/%{module}.tgz
 Patch0:		%{name}-fixpaths.patch
 URL:		http://starship.python.net/crew/friedrich/HTMLgen/html/main.html
-Requires:	python >= 1.5
+BuildRequires:	python-devel >= 2.2
+%requires_eq	python
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -69,5 +74,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {README,ChangeLog}.gz data html image *.rc
-%{_libdir}/python1.5/site-packages/HTMLgen
-%{_libdir}/python1.5/site-packages/HTMLgen.pth
+%{py_sitedir}/site-packages/HTMLgen
+%{py_sitedir}/site-packages/HTMLgen.pth
