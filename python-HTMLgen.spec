@@ -62,13 +62,11 @@ install -d $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
 mv -f *.py $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
 echo %{module} > $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{module}.pth
 
-gzip -9nf README ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,ChangeLog}.gz data html image *.rc
+%doc README ChangeLog data html image *.rc
 %{py_sitedir}/site-packages/HTMLgen
 %{py_sitedir}/site-packages/HTMLgen.pth
