@@ -41,13 +41,13 @@ skryptów w Pythonie. Jest przydatny do generowania stron WWW
 zawieraj±cych okresowo zmieniaj±ce sie informacje. Na przyk³ad stronê
 zawieraj±c± dzienne podsumowania statystyki wykorzystania serwera.
 Innym typowym zastosowaniem jest przygotowywanie strony zawieraj±cej
-opis i odnosniki do rysunków znajduj±cych sie w okreslonym katalogu,
+opis i odno¶niki do rysunków znajduj±cych sie w okre¶lonym katalogu,
 tak aby mo¿na je by³o ³atwo ogl±daæ przez WWW. Python jest dobrym
 jêzykiem do programowania takich zadañ, a wykorzystanie biblioteki
 HTMLgen znacznie u³atwia konstruowanie obiektów, które po
 przetworzeniu przez tê bibliotekê utworz± spójn± stronê WWW.
-Oczywi¶cie sktypty CGI pisane w Pythonie równie¿ mog± robiæ u¿ytek z
-tej bilioteki.
+Oczywi¶cie skrypty CGI pisane w Pythonie równie¿ mog± robiæ u¿ytek z
+tej biblioteki.
 
 %prep
 %setup -q -n HTMLgen
