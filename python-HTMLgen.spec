@@ -1,18 +1,18 @@
-Summary: class library to create HTML documents from within Python  
-Name: python-HTMLgen
-Version: 2.1 
-Release: 3
-Copyright: distributable
-Group: Development/Languages/Python
-Group(pl): Programowanie/Jêzyki/Python
-Source0: HTMLgen.tar.gz 
-Source1: HTMLgen.pth
-Patch0: python-HTMLgen-fixpaths.patch
-Icon: linux-python-small.gif 
+Summary:	class library to create HTML documents from within Python  
+Summary(pl):	Modul do tworzenia domumentów w HTML przy uzyciu Pythona
+Name:		python-HTMLgen
+Version:	2.1 
+Release:	3
+Copyright:	distributable
+Group:		Development/Languages/Python
+Group(pl):	Programowanie/Jêzyki/Python
+Source0:	HTMLgen.tar.gz 
+Source1:	HTMLgen.pth
+Patch0:		python-HTMLgen-fixpaths.patch
+Icon:		linux-python-small.gif 
+Requires:	python >= 1.5
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires: python >= 1.5
-BuildArchitectures: noarch
-Summary(pl): Modul do tworzenia domumentów w HTML przy uzyciu Pythona  
 
 %description
 HTMLgen is a class library for the generation of HTML documents with
@@ -33,33 +33,36 @@ platforms running Python 1.3 or greater. (HTMLcalendar.py requires
 are used for performance.
 
 %description -l pl 
-HTMLGen jest modu³em do tworzenia dokumentów w HTML'u za pomoc± skryptów
-w Pythonie. Jest przydatny do generowania stron WWW zawieraj±cych okresowo
-zmieniaj±ce sie informacje. Na przyk³ad stronê zawieraj±c± dzienne 
-podsumowania statystyki wykorzystania serwera. Innym typowym zastosowaniem 
-jest przygotowywanie strony zawieraj±cej opis i odnosniki do rysunków 
-znajduj±cych sie w okreslonym katalogu, tak aby mo¿na je by³o ³ato ogl±daæ 
-przez www. Python jest dobrym jêzykiem do programowania takich zadañ,
-a wyko¿ystanie biblioteki HTMLGen znacznie u³atwia konstruowanie obiektów
-które po przetwo¿eniu przez tê bibliotekê utworz± spójn± stronê www.
-Oczywi¶cie sktypty CGI pisane w Pythonie równie¿ mog± robiæ u¿ytek z tej 
-bilioteki.
+HTMLGen jest modu³em do tworzenia dokumentów w HTML'u za pomoc±
+skryptów w Pythonie. Jest przydatny do generowania stron WWW
+zawieraj±cych okresowo zmieniaj±ce sie informacje. Na przyk³ad stronê
+zawieraj±c± dzienne podsumowania statystyki wykorzystania serwera.
+Innym typowym zastosowaniem jest przygotowywanie strony zawieraj±cej
+opis i odnosniki do rysunków znajduj±cych sie w okreslonym katalogu,
+tak aby mo¿na je by³o ³ato ogl±daæ przez www. Python jest dobrym
+jêzykiem do programowania takich zadañ, a wyko¿ystanie biblioteki
+HTMLGen znacznie u³atwia konstruowanie obiektów które po przetwo¿eniu
+przez tê bibliotekê utworz± spójn± stronê www. Oczywi¶cie sktypty CGI
+pisane w Pythonie równie¿ mog± robiæ u¿ytek z tej bilioteki.
 
 %prep
-%setup -n HTMLgen
+%setup -q -n HTMLgen
 %patch -p0
 
 %build
 
 %install
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
-install -m 555 $RPM_SOURCE_DIR/HTMLgen.pth $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/
-install -m 555 *.py $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
+
+install $RPM_SOURCE_DIR/HTMLgen.pth $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/
+install *.py $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 					
 %files
+%defattr(644,root,root,755)
 %doc data html image README ChangeLog *.rc *.css
 %{_libdir}/python1.5/site-packages/HTMLgen
 %{_libdir}/python1.5/site-packages/HTMLgen.pth
