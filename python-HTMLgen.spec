@@ -10,6 +10,7 @@ Release:	5
 License:	distributable
 Group:		Development/Languages/Python
 Source0:	http://starship.python.net/crew/friedrich/%{module}.tgz
+# Source0-md5:	cd20f8b63d3215e57289ddbf56c97f48
 Patch0:		%{name}-fixpaths.patch
 URL:		http://starship.python.net/crew/friedrich/HTMLgen/html/main.html
 BuildRequires:	python-devel >= 2.2.1
