@@ -6,7 +6,7 @@ Summary:	Class library to create HTML documents from within Python
 Summary(pl):	Modu³ do tworzenia dokumentów w HTML przy u¿yciu Pythona
 Name:		python-%{module}
 Version:	2.2.2
-Release:	5
+Release:	6
 License:	distributable
 Group:		Development/Languages/Python
 Source0:	http://starship.python.net/crew/friedrich/%{module}.tgz
@@ -58,10 +58,10 @@ tej bilioteki.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
+install -d $RPM_BUILD_ROOT%{py_sitescriptdir}/HTMLgen
 
-mv -f *.py $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/HTMLgen
-echo %{module} > $RPM_BUILD_ROOT%{_libdir}/python1.5/site-packages/%{module}.pth
+mv -f *.py $RPM_BUILD_ROOT%{py_sitescriptdir}/HTMLgen
+echo %{module} > $RPM_BUILD_ROOT%{py_sitescriptdir}/%{module}.pth
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -69,5 +69,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog data html image *.rc
-%{py_sitedir}/site-packages/HTMLgen
-%{py_sitedir}/site-packages/HTMLgen.pth
+%{py_sitescriptdir}/HTMLgen
+%{py_sitescriptdir}/HTMLgen.pth
