@@ -63,16 +63,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc data html image README ChangeLog *.rc *.css
 %{_libdir}/python1.5/site-packages/HTMLgen
 %{_libdir}/python1.5/site-packages/HTMLgen.pth
-
-%changelog
-* Sat Jun 30 1998 Oliver Andrich <oli@andrich.net>
-
-- updated to the HTMLgen 2.1 final version
-
-* Sat Jun 06 1998 Oliver Andrich <oli@andrich.net>
-
-- added the new standard python icon. ;-)  
-
-* Sat Jun 06 1998 Oliver Andrich <oli@andrich.net>
-
-- initial release
