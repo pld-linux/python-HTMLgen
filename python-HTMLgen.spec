@@ -9,7 +9,7 @@ Source0: HTMLgen.tar.gz
 Source1: HTMLgen.pth
 Patch0: python-HTMLgen-fixpaths.patch
 Icon: linux-python-small.gif 
-BuildRoot: /tmp/py-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 Requires: python >= 1.5
 BuildArchitectures: noarch
 Summary(pl): Modul do tworzenia domumentów w HTML przy uzyciu Pythona  
