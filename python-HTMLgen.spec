@@ -13,7 +13,7 @@ Source0:	http://starship.python.net/crew/friedrich/%{module}.tgz
 Patch0:		%{name}-fixpaths.patch
 URL:		http://starship.python.net/crew/friedrich/HTMLgen/html/main.html
 BuildRequires:	python-devel >= 2.2
-%requires_eq	python
+%pyrequires_eq	python
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
