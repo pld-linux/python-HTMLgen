@@ -3,8 +3,8 @@ Name: python-HTMLgen
 Version: 2.1 
 Release: 3
 Copyright: distributable
-Packager: Oliver Andrich <oli@andrich.net>
 Group: Development/Languages/Python
+Group(pl): Proggramowanie/Jêzyki/Python
 Source0: HTMLgen.tar.gz 
 Source1: HTMLgen.pth
 Patch0: python-HTMLgen-fixpaths.patch
@@ -12,19 +12,7 @@ Icon: linux-python-small.gif
 BuildRoot: /tmp/py-root
 Requires: python >= 1.5
 BuildArchitectures: noarch
-
-%changelog
-* Sat Jun 30 1998 Oliver Andrich <oli@andrich.net>
-
-- updated to the HTMLgen 2.1 final version
-
-* Sat Jun 06 1998 Oliver Andrich <oli@andrich.net>
-
-- added the new standard python icon. ;-)  
-
-* Sat Jun 06 1998 Oliver Andrich <oli@andrich.net>
-
-- initial release
+Summary(pl): Modul do tworzenia domumentów w HTML przy uzyciu Pythona  
 
 %description
 HTMLgen is a class library for the generation of HTML documents with
@@ -44,6 +32,19 @@ platforms running Python 1.3 or greater. (HTMLcalendar.py requires
 1.4) If you are running 1.5 the new re and string module enhancements
 are used for performance.
 
+%description -l pl 
+HTMLGen jest modu³em do tworzenia dokumentów w HTML'u za pomoc± skryptów
+w Pythonie. Jest przydatny do generowania stron WWW zawieraj±cych okresowo
+zmieniaj±ce sie informacje. Na przyk³ad stronê zawieraj±c± dzienne 
+podsumowania statystyki wykorzystania serwera. Innym typowym zastosowaniem 
+jest przygotowywanie strony zawieraj±cej opis i odnosniki do rysunków 
+znajduj±cych sie w okreslonym katalogu, tak aby mo¿na je by³o ³ato ogl±daæ 
+przez www. Python jest dobrym jêzykiem do programowania takich zadañ,
+a wyko¿ystanie biblioteki HTMLGen znacznie u³atwia konstruowanie obiektów
+które po przetwo¿eniu przez tê bibliotekê utworz± spójn± stronê www.
+Oczywi¶cie sktypty CGI pisane w Pythonie równie¿ mog± robiæ u¿ytek z tej 
+bilioteki.
+
 %prep
 %setup -n HTMLgen
 %patch -p0
@@ -56,16 +57,22 @@ install -m 555 $RPM_SOURCE_DIR/HTMLgen.pth $RPM_BUILD_ROOT/usr/lib/python1.5/sit
 install -m 555 *.py $RPM_BUILD_ROOT/usr/lib/python1.5/site-packages/HTMLgen
 
 %clean
-# Now we create the slackware packages
-if [ ! -e /tmp/SLACKWARE ]; then
-	mkdir /tmp/SLACKWARE
-fi
-cd $RPM_BUILD_ROOT
-tar cvfz /tmp/SLACKWARE/python-HTMLgen-%{PACKAGE_VERSION}-%{PACKAGE_RELEASE}.tar.gz \
-usr/lib/python1.5/site-packages/HTMLgen usr/lib/python1.5/site-packages/HTMLgen.pth
 rm -rf $RPM_BUILD_ROOT
 					
 %files
 %doc data html image README ChangeLog *.rc *.css
 /usr/lib/python1.5/site-packages/HTMLgen
 /usr/lib/python1.5/site-packages/HTMLgen.pth
+
+%changelog
+* Sat Jun 30 1998 Oliver Andrich <oli@andrich.net>
+
+- updated to the HTMLgen 2.1 final version
+
+* Sat Jun 06 1998 Oliver Andrich <oli@andrich.net>
+
+- added the new standard python icon. ;-)  
+
+* Sat Jun 06 1998 Oliver Andrich <oli@andrich.net>
+
+- initial release
