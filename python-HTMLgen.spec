@@ -2,8 +2,8 @@
 
 %define module HTMLgen
 
-Summary:	Class library to create HTML documents from within Python  
-Summary(pl):	Modu³ do tworzenia dokumentów w HTML przy u¿yciu Pythona  
+Summary:	Class library to create HTML documents from within Python
+Summary(pl):	Modu³ do tworzenia dokumentów w HTML przy u¿yciu Pythona
 Name:		python-%{module}
 Version:	2.2.2
 Release:	5
@@ -35,7 +35,7 @@ platforms running Python 1.3 or greater. (HTMLcalendar.py requires
 1.4) If you are running 1.5 the new re and string module enhancements
 are used for performance.
 
-%description -l pl 
+%description -l pl
 HTMLGen jest modu³em do tworzenia dokumentów w HTML-u za pomoc±
 skryptów w Pythonie. Jest przydatny do generowania stron WWW
 zawieraj±cych okresowo zmieniaj±ce sie informacje. Na przyk³ad stronê
@@ -66,7 +66,7 @@ gzip -9nf README ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-					
+
 %files
 %defattr(644,root,root,755)
 %doc {README,ChangeLog}.gz data html image *.rc
