@@ -5,7 +5,7 @@ Summary(pl):	Modu³ do tworzenia dokumentów w HTML przy u¿yciu Pythona
 Name:		python-%{module}
 Version:	2.2.2
 Release:	4
-License:	Distributable
+License:	distributable
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
