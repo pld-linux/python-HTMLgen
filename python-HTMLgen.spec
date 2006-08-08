@@ -51,7 +51,7 @@ tej biblioteki.
 
 %prep
 %setup -q -n HTMLgen
-%patch -p0
+%patch0 -p0
 
 %build
 
