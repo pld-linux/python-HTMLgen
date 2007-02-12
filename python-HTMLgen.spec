@@ -2,7 +2,7 @@
 %define		module	HTMLgen
 
 Summary:	Class library to create HTML documents from within Python
-Summary(pl):	Modu³ do tworzenia dokumentów w HTML przy u¿yciu Pythona
+Summary(pl.UTF-8):   ModuÅ‚ do tworzenia dokumentÃ³w w HTML przy uÅ¼yciu Pythona
 Name:		python-%{module}
 Version:	2.2.2
 Release:	7
@@ -35,18 +35,18 @@ platforms running Python 1.3 or greater. (HTMLcalendar.py requires
 1.4) If you are running 1.5 the new re and string module enhancements
 are used for performance.
 
-%description -l pl
-HTMLGen jest modu³em do tworzenia dokumentów w HTML-u za pomoc±
-skryptów w Pythonie. Jest przydatny do generowania stron WWW
-zawieraj±cych okresowo zmieniaj±ce sie informacje. Na przyk³ad stronê
-zawieraj±c± dzienne podsumowania statystyki wykorzystania serwera.
-Innym typowym zastosowaniem jest przygotowywanie strony zawieraj±cej
-opis i odno¶niki do rysunków znajduj±cych sie w okre¶lonym katalogu,
-tak aby mo¿na je by³o ³atwo ogl±daæ przez WWW. Python jest dobrym
-jêzykiem do programowania takich zadañ, a wykorzystanie biblioteki
-HTMLgen znacznie u³atwia konstruowanie obiektów, które po
-przetworzeniu przez tê bibliotekê utworz± spójn± stronê WWW.
-Oczywi¶cie skrypty CGI pisane w Pythonie równie¿ mog± robiæ u¿ytek z
+%description -l pl.UTF-8
+HTMLGen jest moduÅ‚em do tworzenia dokumentÃ³w w HTML-u za pomocÄ…
+skryptÃ³w w Pythonie. Jest przydatny do generowania stron WWW
+zawierajÄ…cych okresowo zmieniajÄ…ce sie informacje. Na przykÅ‚ad stronÄ™
+zawierajÄ…cÄ… dzienne podsumowania statystyki wykorzystania serwera.
+Innym typowym zastosowaniem jest przygotowywanie strony zawierajÄ…cej
+opis i odnoÅ›niki do rysunkÃ³w znajdujÄ…cych sie w okreÅ›lonym katalogu,
+tak aby moÅ¼na je byÅ‚o Å‚atwo oglÄ…daÄ‡ przez WWW. Python jest dobrym
+jÄ™zykiem do programowania takich zadaÅ„, a wykorzystanie biblioteki
+HTMLgen znacznie uÅ‚atwia konstruowanie obiektÃ³w, ktÃ³re po
+przetworzeniu przez tÄ™ bibliotekÄ™ utworzÄ… spÃ³jnÄ… stronÄ™ WWW.
+OczywiÅ›cie skrypty CGI pisane w Pythonie rÃ³wnieÅ¼ mogÄ… robiÄ‡ uÅ¼ytek z
 tej biblioteki.
 
 %prep
