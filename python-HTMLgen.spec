@@ -2,7 +2,7 @@
 %define		module	HTMLgen
 
 Summary:	Class library to create HTML documents from within Python
-Summary(pl.UTF-8):   Moduł do tworzenia dokumentów w HTML przy użyciu Pythona
+Summary(pl.UTF-8):	Moduł do tworzenia dokumentów w HTML przy użyciu Pythona
 Name:		python-%{module}
 Version:	2.2.2
 Release:	7
